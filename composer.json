@@ -1,8 +1,8 @@
 {
-    "name": "jrm2k6/cloudder",
+    "name": "am05mhz/cloudder",
     "description": "Cloudinary API wrapper for Laravel",
-    "keywords": ["laravel", "laravel4", "cloudinary", "api", "image", "upload"],
-    "homepage": "https://github.com/jrm2k6/cloudder",
+    "keywords": ["laravel", "laravel5", "cloudinary", "api", "image", "upload"],
+    "homepage": "https://github.com/am05mhz/cloudder",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -13,7 +13,7 @@
     ],
     "require": {
         "php": ">=5.3.0",
-        "cloudinary/cloudinary_php": "^1.1"
+        "cloudinary/cloudinary_php": "^2.0"
     },
     "require-dev": {
         "laravel/framework": ">=5.0",
