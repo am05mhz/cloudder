@@ -1,8 +1,8 @@
 <?php
 
-namespace JD\Cloudder\Test;
+namespace Am05mhz\Cloudder\Test;
 
-use JD\Cloudder\CloudinaryWrapper;
+use Am05mhz\Cloudder\CloudinaryWrapper;
 use Mockery as m;
 
 class CloudinaryWrapperTest extends \PHPUnit_Framework_TestCase

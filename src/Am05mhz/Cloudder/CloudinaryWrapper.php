@@ -1,6 +1,6 @@
 <?php
 
-namespace JD\Cloudder;
+namespace Am05mhz\Cloudder;
 
 use Cloudinary\Cloudinary;
 use Cloudinary\Api\Upload\UploadApi as Uploader;

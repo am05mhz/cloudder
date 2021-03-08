@@ -48,15 +48,15 @@ Add the following in config/app.php:
 
 ```php
 'providers' => array(
-  JD\Cloudder\CloudderServiceProvider::class,
+  Am05mhz\Cloudder\CloudderServiceProvider::class,
 );
 
 'aliases' => array(
-  'Cloudder' => JD\Cloudder\Facades\Cloudder::class,
+  'Cloudder' => Am05mhz\Cloudder\Facades\Cloudder::class,
 );
 ```
 
-Run `php artisan vendor:publish --provider="JD\Cloudder\CloudderServiceProvider"`
+Run `php artisan vendor:publish --provider="Am05mhz\Cloudder\CloudderServiceProvider"`
 
 ## Usage
 
