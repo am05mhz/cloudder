@@ -2,7 +2,9 @@
 
 namespace JD\Cloudder;
 
-use Cloudinary;
+use Cloudinary\Cloudinary;
+use Cloudinary\Api\Upload\UploadApi as Uploader;
+use Cloudinary\Api\Admin\AdminApi as Api;
 use Illuminate\Config\Repository;
 
 class CloudinaryWrapper
@@ -45,8 +47,8 @@ class CloudinaryWrapper
     public function __construct(
         Repository $config,
         Cloudinary $cloudinary,
-        Cloudinary\Uploader $uploader,
-        Cloudinary\Api $api
+        Uploader $uploader,
+        Api $api
     ) {
         $this->cloudinary = $cloudinary;
 
@@ -56,11 +58,11 @@ class CloudinaryWrapper
 
         $this->config = $config;
 
-        $this->cloudinary->config(array(
-            'cloud_name' => $this->config->get('cloudder.cloudName'),
-            'api_key'    => $this->config->get('cloudder.apiKey'),
-            'api_secret' => $this->config->get('cloudder.apiSecret')
-        ));
+        // $this->cloudinary->config(array(
+        //     'cloud_name' => $this->config->get('cloudder.cloudName'),
+        //     'api_key'    => $this->config->get('cloudder.apiKey'),
+        //     'api_secret' => $this->config->get('cloudder.apiSecret')
+        // ));
     }
 
     /**
