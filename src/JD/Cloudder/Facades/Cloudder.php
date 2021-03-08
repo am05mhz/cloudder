@@ -1,6 +1,6 @@
 <?php 
 
-namespace Am05mhz\Cloudder\Facades;
+namespace JD\Cloudder\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

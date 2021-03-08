@@ -22,17 +22,17 @@
     },
     "autoload": {
         "psr-0": {
-            "Am05mhz\\Cloudder": "src/"
+            "JD\\Cloudder": "src/"
         }
     },
     "minimum-stability": "stable",
     "extra": {
         "laravel": {
             "providers": [
-                "Am05mhz\\Cloudder\\CloudderServiceProvider"
+                "JD\\Cloudder\\CloudderServiceProvider"
             ],
             "aliases": {
-                "Cloudder": "Am05mhz\\Cloudder\\Facades\\Cloudder"
+                "Cloudder": "JD\\Cloudder\\Facades\\Cloudder"
             }
         }
     }

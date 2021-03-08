@@ -18,7 +18,7 @@
 
 `composer require jrm2k6/cloudder`
 
-For people still using Laravel 4.2: `composer require jrm2k6/cloudder:0.1.*` and check the branch l4 for the installation instructions.
+For people still using Laravel 4.2: `composer require am05mhz/cloudder:0.1.*` and check the branch l4 for the installation instructions.
 
 
 ## Configuration
@@ -48,15 +48,15 @@ Add the following in config/app.php:
 
 ```php
 'providers' => array(
-  Am05mhz\Cloudder\CloudderServiceProvider::class,
+  JD\Cloudder\CloudderServiceProvider::class,
 );
 
 'aliases' => array(
-  'Cloudder' => Am05mhz\Cloudder\Facades\Cloudder::class,
+  'Cloudder' => JD\Cloudder\Facades\Cloudder::class,
 );
 ```
 
-Run `php artisan vendor:publish --provider="Am05mhz\Cloudder\CloudderServiceProvider"`
+Run `php artisan vendor:publish --provider="JD\Cloudder\CloudderServiceProvider"`
 
 ## Usage
 
