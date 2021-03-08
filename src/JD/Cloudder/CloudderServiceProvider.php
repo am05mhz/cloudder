@@ -3,7 +3,9 @@
 namespace JD\Cloudder;
 
 use Illuminate\Support\ServiceProvider;
-use Cloudinary;
+use Cloudinary\Cloudinary;
+use Cloudinary\Api\Upload\UploadApi as Uploader;
+use Cloudinary\Api\Admin\AdminApi as Api;
 
 class CloudderServiceProvider extends ServiceProvider
 {
@@ -43,7 +45,14 @@ class CloudderServiceProvider extends ServiceProvider
     {
         $app = $this->app;
         $this->app->singleton('cloudder', function () use ($app) {
-            return new CloudinaryWrapper($app['config'], new Cloudinary, new Cloudinary\Uploader, new Cloudinary\Api);
+            $config = [
+                'cloud_name' => $app['config']->get('cloudder.cloudName'),
+                'api_key' => $app['config']->get('cloudder.apiKey'),
+                'api_secret' => $app['config']->get('cloudder.apiSecret')
+            ];
+            return new CloudinaryWrapper($app['config'], new Cloudinary(
+                ['cloud' => $config]
+            ), new Uploader, new Api);
         });
     }
 
